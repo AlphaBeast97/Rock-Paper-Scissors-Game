@@ -1,1 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color:#e0ffff;
+}
+/* all the elements are in this */
+.container {
+    background-color: #fcf7c3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 35px;
+    width: 50vw;
+    height: 65vh;
+}
+/* game name */
+.name {
+    background-color: #F2F5FF;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+    background-color: #F49097;
+    color:#F2F5FF;
+    padding: 10px;   
+}
+/* this has the buttons */
+.elements {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2.5rem;
+    height: 40%;
+    margin-top: 20px;
+}
+/* the buttons themselves */
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    color: #261C15;
+    transition: 250ms;
+}
+.circle:hover{
+    width: 130px;
+    height: 130px;
+    margin: -10%;
+    cursor: pointer;
+    font-size: 3.5rem ;
+    box-shadow: 8px 1px 10px 5px #261c1537;
+}
+.rock {
+    background-color: #FB6107;
+}
+.rock:hover{
+    margin: 5%;
+}
+.paper {
+    background-color: #F3DE2C;
+}
+.scissors {
+    background-color: #20A4F3;
+}
+.scissors:hover{
+    margin: 5%;
+}
+i {
+    margin-top: 25px;
+}
+.fa-hand-scissors {
+    transform: rotate(90deg);
+}
+p {
+    font-size: 1rem;
+    font-weight: 600;
+}
+/* the counter */
+.counter {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 50%;
+    margin-top: 40px;
+    margin-left: 25%;
+    justify-content: space-around;
+}
+.ctr {
+    margin-top: 5px;
+}
+.cnt {
+    border: 2px solid black;
+    height: 55px;
+    width: 80px;
+}
+.wins {
+    background-color: greenyellow;
+}
+.loses {
+    background-color: rgb(255, 0, 51);
+}
+.win-lose {
+    margin-top: 20px;
+}
+.msg-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    height: 50px;
+}
+.msg-con {
+    height: 50px;
+    background-color: #261C15;
+    color: #F2F5FF;
+    border-radius: 25px;
+}
+.msg {
+    font-size: .7rem;
+    margin-top: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
+@media screen and (max-width: 800px) {
+    * {
+        font-size: 1rem;
+    }
+    .container {
+        height: 80%;
+    }
+    .elements {
+        height: 50%;
+        flex-direction: column;
+    }
+    .circle {
+        width: 80px;
+        height: 80px;
+    }
+    .circle:hover {
+        width: 100px;
+        height: 100px;
+        margin: -8%;
+
+    }
+}

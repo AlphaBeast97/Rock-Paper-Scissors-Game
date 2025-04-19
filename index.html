@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper & Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="name">
+            <h1 class="game-name">
+                Rock, Paper & Scissors
+            </h1>
+        </div>
 
+        <div class="elements">
+            <div id="rock" class="rock circle">
+                <i class="fa-solid fa-hand-back-fist"></i>
+                <p>Rock</p>
+            </div>
+        
+            <div id="paper" class="paper circle">
+                <i class="fa-solid fa-hand"></i>
+                <p>Paper</p>
+            </div>
+        
+            <div id="scissors" class="scissors circle">
+                <i class="fa-solid fa-hand-scissors"></i>
+                <p>Scissors</p>
+            </div>
+        </div>
+
+        <div class="counter">
+            <div class="wins cnt">
+                <i class="fa-solid fa-face-smile ctr"></i>
+                <p>
+                    Wins!
+                </p>
+                <p class="win-counter win-lose">0</p>
+            </div>
+            <div class="loses cnt">
+                <i class="fa-solid fa-face-sad-cry ctr"></i>
+                <p>
+                    Losses!
+                </p>
+                <p class="lose-counter win-lose">0</p>
+            </div>
+        </div>
+        <div class="msg-box">
+            <div class="msg-con">
+                <p class="msg">Play your Move!</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
