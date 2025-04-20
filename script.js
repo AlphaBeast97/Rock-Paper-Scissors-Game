@@ -10,32 +10,32 @@ let msgBox = document.querySelector(".msg-con");
 const choices = document.querySelectorAll(".circle");
 
 const playGame = (user, comp) => {
-    console.log(user, comp);
-    if(user === comp){
-        msg.innerHTML = "Draw";
-        msgBox.style.background = "#261C15";
-    }
-    else if((user === "rock" && comp === "paper") || (user === "paper" && comp === "scissors") || (user === "scissors" && comp === "rock")){
-        loseCounter.innerHTML = ++lose_num;
-        msgBox.style.background = "red";
-        msg.innerHTML = 'Your ' + user + ' was defeated by ' + comp;
-    } 
-    else{
-        winCounter.innerHTML = ++win_num;
-        msg.innerHTML = 'Your ' + user + ' defeated ' + comp;
-        msgBox.style.background = "green";
-    }
+  console.log(user, comp);
+  if(user === comp){
+    msg.innerHTML = "Draw";
+    msgBox.style.background = "#261C15";
+  }
+  else if((user === "rock" && comp === "paper") || (user === "paper" && comp === "scissors") || (user === "scissors" && comp === "rock")){
+    loseCounter.innerHTML = ++lose_num;
+    msgBox.style.background = "red";
+    msg.innerHTML = 'Your ' + user + ' was defeated by ' + comp;
+  } 
+  else{
+    winCounter.innerHTML = ++win_num;
+    msg.innerHTML = 'Your ' + user + ' defeated ' + comp;
+    msgBox.style.background = "green";
+  }
 }
 
 choices.forEach ((choice) => {
-    choice.addEventListener("click", () => {
-        const userChoice = choice.getAttribute("id");
-        let compChoice = Math.floor(Math.random() * 3);
-        if(compChoice == 0){compChoice = "rock"}
-        else if(compChoice == 1){compChoice = "paper"}
-        else{compChoice = "scissors"}
-        playGame(userChoice, compChoice);
-    });
+  choice.addEventListener("click", () => {
+    const userChoice = choice.getAttribute("id");
+
+    const op = ["rock", "paper", "scissors"]; //comp options
+    let compChoice = op[Math.floor(Math.random() * op.length)]; //comp pick
+    
+    playGame(userChoice, compChoice);
+  });
 });
 
 
