@@ -147,3 +147,9 @@ p {
 
     }
 }
+@media screen and (max-width: 400px) {
+    .counter {
+        scale: 80%;
+        margin-left: 10%;
+    }
+}
